@@ -2,15 +2,13 @@
 <html>
 <head>
 	<title>Train Schedule</title>
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	
 	<link rel="stylesheet" href="assets/css/style.css">
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mina">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	
 </head>
 <body>
 <div class="container">
@@ -21,7 +19,7 @@
 	</div>
 
 	<div class="panel panel-default">
- 		<div class="panel-heading">
+ 		<div class="panel-heading" id="topPanel">
  			<h3 class="panel-title">Current Train Schedule</h3>
  		</div>
 		<div class="panel-body">
@@ -30,7 +28,7 @@
 	 				<tr>
 			 			<th> Train Name </th>
 			 			<th> Destination </th>
-			 			<th> Frequency (min) </th>
+			 			<th> Frequency (mins) </th>
 			 			<th> Next Arrival </th>
 			 			<th> Minutes Away </th>
 	 				</tr>
@@ -43,7 +41,7 @@
  	</div>
 
 	<div class="panel panel-default">
-		<div class="panel-heading">
+		<div class="panel-heading" id="bottomPanel">
 	 		<h3 class="panel-title">Add Train</h3>
 	 	</div>
 
@@ -60,12 +58,12 @@
 				</div>
 					 
 				<div class="form-group">
-					<label for="">First Train Time (HH:mm - military time)</label>
+					<label for="">First Train Time (HH:mm - Military Time)</label>
 					<input type="text" class="form-control" id="time" >
 				</div>
 
 				<div class="form-group">
-					<label for="">Frequency (min)</label>
+					<label for="">Frequency (mins)</label>
 					<input type="text" class="form-control" id="freq" >
 				</div>
 					 
